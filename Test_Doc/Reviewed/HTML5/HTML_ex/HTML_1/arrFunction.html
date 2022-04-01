@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Elements to Function</title>
+    <script type="text/javascript">
+      var a = [1,2,3,4,5];
+      document.writeln("<h2>Effects of passing entire " +  "array by reference</h2>");
+      outputArray("Original array: ",a);
+      modifyArray(a); //array a is passed by reference
+      outputArray("Modified array: ",a);
+      document.writeln("<h2>Effects of passing array's element by value</h2>" +
+                    "a[3] before modifyElement: "+ a[3]);
+      modifyElement(a[3]);
+      document.writeln("<br />a[3] after modifyElement: "+a[3]);
+      function outputArray(heading,theArray){
+        document.writeln(
+            heading + theArray.join(" ") + "<br />");
+      }
+      function modifyArray(theArray){
+        for(var j in theArray)
+        theArray[j] *= 2;
+      }
+      function modifyElement(e)
+      {
+        e*=2;
+        document.writeln("<br />value in modifyElement: "+e);
+      }
+      </script>
+
+  </head>
+  <body>
+  </body>
+</html>

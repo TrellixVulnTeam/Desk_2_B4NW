@@ -1,0 +1,8 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"failed","Tue Jun 15 17:35:20 PDT 2021","Tue Jun 15 17:35:20 PDT 2021","0","","test_log","","","","test_case_01","
+    用例描述：Test case 01
+    "
+"passed","Tue Jun 15 17:35:20 PDT 2021","Tue Jun 15 17:35:20 PDT 2021","0","","test_log","","","","test_case_02","
+    用例描述：Test case 02
+    "
+"passed","Tue Jun 15 17:35:20 PDT 2021","Tue Jun 15 17:35:20 PDT 2021","36","","log_test","","","","test_login",""

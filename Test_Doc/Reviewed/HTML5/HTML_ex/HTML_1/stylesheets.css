@@ -1,0 +1,30 @@
+img{
+    width: 240px;
+    position: relative;
+    left:50px;
+    bottom: 20px;
+  }
+  body{
+    color: blue;
+    background-color: rgb(255,157,206);
+    font-family: Arial;
+    font-size: 25px;
+    text-align: center;
+    /*
+    background-image: url()
+    */
+  }
+  .directions{
+    font-weight: bold;
+    color: #ffffff;
+  }
+  #love{
+    font-style: italic;
+  }
+  p span{
+    color:red;
+  }
+  div{
+    border: 2px solid green;
+    padding: 20px 60px;
+  }

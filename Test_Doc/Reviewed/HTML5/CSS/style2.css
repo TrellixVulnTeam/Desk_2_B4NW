@@ -1,0 +1,31 @@
+/* sytle.css */
+/* Selector {
+    property: value;
+} */
+
+/* <h2>Home</h2> */
+h2 {
+    color:blue;
+}
+
+p {
+    font-size: 20px;
+}
+
+span {
+    font-size: 2em;
+}
+
+.boxmodel {
+    border: 1px solid red;
+    display: inline-block;
+    padding: 50px 20px 5px 20px; /*top right bottom left */
+    margin:  100px 20px 50px 20px;
+    width: 33px;
+    height: 55px;
+}
+
+/* margin: shows the size and shape of the .box
+border: shows the color and line-shape of the box border
+padding: shows the cushion between content and border.
+width, height: shows the size of content */

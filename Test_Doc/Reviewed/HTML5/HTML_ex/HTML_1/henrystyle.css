@@ -1,0 +1,41 @@
+body{
+  font-family: Arial;
+  margin:0px;
+}
+
+a{
+  color:red;
+}
+img{
+  width: 200px;
+}
+p span{
+  font-weight: bold;
+}
+.header{
+  background-color: #99B5DD;
+  position: fixed;
+  top:0px;
+  height: 60px;
+  padding: 0px 10px;
+  font-size: 50px;
+  z-index: 10;
+}
+.content{
+  height: 200px;
+  position: absolute;
+  top: 60px;
+  padding: 10px;
+  z-index: 0;
+}
+.footer{
+  background-color: #0F215D;
+  position: fixed;
+  bottom: 0px;
+  height: 20px;
+  width: 100%;
+  z-index: 10;
+}
+/*
+framework: Bootstrap
+*/

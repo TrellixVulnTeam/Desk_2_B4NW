@@ -1,0 +1,49 @@
+/* sytle.css */
+/* Selector {
+    property: value;
+} */
+
+/* <h2>Home</h2> */
+
+/* body {
+    background-image: url(backgroundimage.jpg);
+    background-size: cover;
+} */
+
+/* * means it applies to whole html file */
+* {
+    text-align: right;
+}
+
+h2,p {
+    color:red;
+    text-align: center;
+    border: 5px dashed rgb(100, 100, 255);
+}
+
+p {
+    line-height: 20px;
+    font-style:  italic;
+    font-weight: bold;
+    font-size:  150%;
+    font-family: 'Times New Roman';
+}
+li {
+    list-style: none;
+    display: inline-block;
+}
+
+/* anyName is a class  */
+.anyName {
+    border: 2px solid rgb(200,80,100);
+    /* border: 2px solid green; */
+}
+
+/* div1 is an id attribute*/
+#div1 {
+    background: rgba(50,50,50,0.2);
+}
+
+#div2 {
+    background: rgba(0,0,255,0.2);
+}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Array Usage</title>
+<script type="text/javascript">
+var colors = new Array("cyan","magenta","yellow","black");
+var integers1 = [2,4,6,8];
+var integers2 = [2,,,8];
+outputArray("Array colors is", colors);
+outputArray("Array integers1 is", integers1);
+outputArray("Array integers2 is", integers2);
+
+function outputArray(heading, theArray){
+  document.writeln("<h2>"+heading+"</h2>");
+  document.writeln("<table border=\"1\"");
+  document.writeln("<thead><th><Subscript</th>"+
+        "<th>Value</th></thread><tbody>");
+  for(var i=0; i<theArray.length;i++)
+  document.writeln("<tr><td>"+i+"</td><td>"+
+      theArray[i]+"</td></tr>");
+  document.write("</tbody></table>");
+}
+</script>
+</head>
+<body></body>
+</html>

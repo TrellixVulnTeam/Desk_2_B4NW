@@ -1,0 +1,21 @@
+03/12/2022 17:50:57 - log_basic test_pytest_logging_1.py- test_basic [line:19] WARNING - this is warning
+03/12/2022 17:50:57 - log_basic test_pytest_logging_1.py- test_basic [line:20] ERROR - this is error
+03/12/2022 17:50:57 - log_basic test_pytest_logging_1.py- test_basic [line:21] CRITICAL - this is critical
+03/12/2022 17:51:02 - log_basic test_pytest_logging_1.py- test_basic [line:27] ERROR - 1!==2
+assert 1 == 2
+  +1
+  -2
+Traceback (most recent call last):
+  File "C:\Users\jsun\Documents\Desk_2\Test_Auto\logging_pytest\test_pytest_logging_1.py", line 24, in test_basic
+    assert 1==2, "1!==2"
+AssertionError: 1!==2
+assert 1 == 2
+  +1
+  -2
+03/12/2022 17:51:02 - log_basic test_pytest_logging_1.py- test_basic1 [line:35] WARNING - this is warning
+03/12/2022 17:51:02 - log_basic test_pytest_logging_1.py- test_basic1 [line:36] ERROR - this is error
+03/12/2022 17:51:02 - log_basic test_pytest_logging_1.py- test_basic1 [line:37] CRITICAL - this is critical
+03/12/2022 17:51:02 - log_basic test_pytest_logging_1.py- test_basic1 [line:38] WARNING - Starting a=1/0
+03/12/2022 17:51:02 - log_basic test_pytest_logging_1.py- test_basic2 [line:53] WARNING - this is warning
+03/12/2022 17:51:02 - log_basic test_pytest_logging_1.py- test_basic2 [line:54] ERROR - this is error
+03/12/2022 17:51:02 - log_basic test_pytest_logging_1.py- test_basic2 [line:55] CRITICAL - this is critical

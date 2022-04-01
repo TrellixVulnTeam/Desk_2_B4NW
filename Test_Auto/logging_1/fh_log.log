@@ -1,0 +1,15 @@
+2022-03-11 17:41:44,497 - logger1 - WARNING - warn message 1
+2022-03-11 17:43:20,786 - logger1 - WARNING - warn message 1
+2022-03-11 17:43:20,786 - logger1 - ERROR - error message 1
+2022-03-11 17:45:40,073 - logger1 - WARNING - warn message 1
+2022-03-11 17:45:40,073 - logger1 - INFO - info message 1
+2022-03-11 17:45:40,073 - logger1 - ERROR - error message 1
+2022-03-11 17:50:12,062 - logger1 basic_log_3.py- WARNING - warn message 1
+2022-03-11 17:50:12,062 - logger1 basic_log_3.py- INFO - info message 1
+2022-03-11 17:50:12,062 - logger1 basic_log_3.py- ERROR - error message 1
+2022-03-11 18:14:36,347 - logger1 basic_log_3.py- WARNING - warn message 1
+2022-03-11 18:14:36,347 - logger1 basic_log_3.py- INFO - info message 1
+2022-03-11 18:14:36,347 - logger1 basic_log_3.py- ERROR - error message 1
+2022-03-12 12:14:14,886 - logger1 basic_log_3.py- WARNING - warn message 3
+2022-03-12 12:14:14,886 - logger1 basic_log_3.py- INFO - info message 3
+2022-03-12 12:14:14,886 - logger1 basic_log_3.py- ERROR - error message 3

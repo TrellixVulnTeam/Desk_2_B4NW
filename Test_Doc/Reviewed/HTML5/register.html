@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Register</title>
+
+    </head>
+    <body>
+        <span></span>
+        <div></div>
+        <form method="GET" > <!--</form>action="run_server_script.php">--> 
+            <!-- Default method is GET if no method is specified
+            action= the script to be run on the server once server 
+            receive the form
+            --> 
+            <label>
+                First Name: 
+                <input type="text" name="FirstName"><br>
+            </label>
+            
+            Last Name: <input type="text" name="lastname"><br>
+            Email: <input type="email" name="email"><br>
+            <!-- Email: <input type="email" name="email" required><br> -->
+            Password: <input type="password" name="password" min="5"><br>
+            Birthday: <input type="date" name="date"> <br>
+            Gender:<br>
+            <!-- when the form is submitted, the name/value pair is sent to server-->
+            <label for="gender_male">
+                <input type="radio" id="gender_male" name="gender" value="Male">Male<br>
+            </label>
+            <input type="radio" name="gender" value="Female">Female<br>
+            Pets: <br>
+            <input type="Checkbox" name="cat" value="CAT"> Cat<br>
+            <input type="Checkbox" name="dog" value="DOG"> Dog<br>
+            Cars: <br>
+            <select name="cars">
+                <option value="Volvo" name="Volvo" value="volvo">Volvo</option>
+                <option value="Audi" name="Audi" value="Audi">Audi </option>
+            </select><br><br><br>
+            <input type="submit" value="Register!"><br>
+            <input type="reset">
+        </form>
+ 
+    </body>
+</html>
+
+<!-- file:///C:/Users/jsun/Documents/Desk_2/Test_Doc/Reviewed/HTML5/register.html
+    ?firstname=jian&lastname=ma&email=fade%40yahoo.com&password=123456&date=2022-02-08&gender=on&cat=on&dog=on -->
+
+<!--file:///C:/Users/jsun/Documents/Desk_2/Test_Doc/Reviewed/HTML5/register.html
+    ?FirstName=jian&lastname=Sun&email=fade%40yahoo.com&password=123456&date=2022-02-09&gender=Female&dog=DOG&cars=Audi 
+-->

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>More Forms</title>
+</head>
+<body>
+  <h1>Feedback Form</h1>
+  <p>Please Fill out this form to help us improve our site.</p>
+  <form method="post" action="">
+    <p>
+      <input type = "hidden" name="recipient"
+        value="deitel@deitel.com" />
+      <input type="hidden" name="subject"
+        value="Feedback Form"/>
+      <input type="hidden" name="redirect"
+        value="main.html"/
+    </p>
+    <!--textarea ceates a multi-row textbox -->
+    <p><label>Comments:<br />
+      <textarea name="comments"
+        rows="4" cols="36">Enter comments here.</textarea>
+      </label></p>
+
+    <p><label>E-mail Address:
+      <input name="email" type="password" size="25"/>
+    </label></p>
+    <p>
+      <strong>Things you liked:</strong><br />
+      <label>Site design
+        <input name="thingsliked" type="checkbox"
+          value="Design"/></label>
+      <label>Links
+        <input name = "thingsliked" type="checkbox"
+          value="links" /></label>
+      <label>Ease of use
+        <input name="thingsliked" type="checkbox"
+          value="Ease" /></label>
+    </p>
+    <p> <!-- radio ceates button that can only be selected one at a time -->
+      <strong>How did you get to our site?:</strong><br />
+      <label>Search engine
+        <input name="howtosite" type="radio"
+          value= "search engine" checked="checked"/></label>
+      <label>Links from another site
+        <input name="howtosite" type="radio"
+        value="link"/></label>
+      <label>Deitel.com Web site
+        <input name="howtosite" type="radio"
+        value="deite.com"/></label>
+        <label>Reference in a book
+          <input name="howtosite" type="radio"
+          value="book" /></label>
+    </p>
+    <p>
+      <label>Rate our Site:
+        <!-- drop down list -->
+        <select name = "rating">
+          <option selected="selected" >Amazing</option>
+          <option>8</option>
+          <option>7</option>
+          <option>6</option>
+          <option>5</option>
+          <option>4</option>
+          <option>3</option>
+          <option>2</option>
+          <option>1</option>
+          <option>Awful</option>
+        </select>
+      </label>
+    </p>
+
+
+</html>
