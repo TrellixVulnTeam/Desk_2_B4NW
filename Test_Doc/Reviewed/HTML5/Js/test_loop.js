@@ -25,3 +25,8 @@ todos.forEach(function(todo,k){
 todos.forEach(function (todo, m) {
     console.log(m,todo);
 })
+
+function write_test(){
+    console.log("I am writing a test !");
+}
+write_test()
