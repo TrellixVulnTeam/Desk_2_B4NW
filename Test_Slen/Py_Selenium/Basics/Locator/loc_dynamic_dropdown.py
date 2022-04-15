@@ -38,6 +38,7 @@ css_selector = "input[placeholder='From']"
 # from_field = driver.find_element_by_css_selector(css_sel)
 # <p class="font14 appendBottom5 blackText">Bangkok, Thailand</p>
 city_list = driver.find_elements_by_css_selector("p[class*='font14 appendBottom5 blackText']")
+city_list = driver.find_elements_by_css_selector("p.font14.appendBottom5.blackText")
 print(f"num of cities is {len(city_list)}")
 
 # for i, city in enumerate(city_list):

@@ -11,18 +11,22 @@ from time import time
 # convert a list of str to a single string
 
 
-from collections import defaultdict, deque
+# from collections import defaultdict, deque
+#
+# dic = defaultdict(lambda: {1})
+# dic['a'].add(2)
+#
+# print(list(dic.items())) # [('a', {1, 2})]
+#
+# dic = defaultdict(lambda: set([1]))
+# dic['a'].add(2)
+#
+# print(list(dic.items())) # [('a', {1, 2})]
+#
+# dic = defaultdict(lambda: deque([100]))
+# dic["a"].append(200)
+# print(dic["a"]) # deque([100, 200])
 
-dic = defaultdict(lambda: {1})
-dic['a'].add(2)
-
-print(list(dic.items())) # [('a', {1, 2})]
-
-dic = defaultdict(lambda: set([1]))
-dic['a'].add(2)
-
-print(list(dic.items())) # [('a', {1, 2})]
-
-dic = defaultdict(lambda: deque([100]))
-dic["a"].append(200)
-print(dic["a"]) # deque([100, 200])
+my_set = {1,2,3}
+my_set.add({5,6})
+print(my_set)
