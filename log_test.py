@@ -27,6 +27,7 @@ from time import time
 # dic["a"].append(200)
 # print(dic["a"]) # deque([100, 200])
 
-my_set = {1,2,3}
-my_set.add({5,6})
-print(my_set)
+
+nums = ["4","100", " 20"] # ['4', '100', ' 20']
+print(1,2,3, sep=": ")
+

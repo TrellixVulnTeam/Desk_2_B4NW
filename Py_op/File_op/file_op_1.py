@@ -3,8 +3,9 @@ import os, glob
 import fnmatch
 import shutil
 
-#os.path.exists will also return True if there's a regular file with that name.
-#os.path.isdir will only return True if that path exists and is a directory.
+#   os.path.exists will also return True if there's a regular file with that name.
+#   os.path.isdir will only return True if that path exists and is a directory.
+#   os.path.join(path, file_name)
 
 # copy2 need des. folder exists
 # copy2 src_file can't be dir.
@@ -17,12 +18,13 @@ import shutil
 
 ## 1. copy a file with copy2
 print(os.getcwd())
-#os.remove("write_log.txt")
+#   os.remove("write_log.txt")
 # os.path.join(path, *paths)
 file_name = "src.txt"
 src = os.path.join(os.getcwd(), file_name)
 des_dir = "C:/Users/jsun/Documents/Desk_1/Py_op/File_op/Basic_op/test_2"
 des = os.path.join(des_dir, "des.txt")
+
 shutil.copy2(src, des)
 # des is a file, with a given name
 shutil.copy2(src, des_dir)
@@ -31,13 +33,15 @@ os.remove(des)
 os.remove(os.path.join(des_dir, file_name))
 
 
-## 2. copy a folder with copytree
+#   2. copy a folder with copytree
 # copytree(src_dir, des_dir)
 # dec_dir can't exist; Otherwise, its an error
 
 src_dir = "C:/Users/jsun/Documents/Desk_1/Py_op/File_op/Basic_op/test_1"
+
 os.chdir(des_dir)
 copy_folder = "copy_folder"
+
 # if not os.path.exists(copy_folder):
 #     os.mkdir(copy_folder)
 # if os.path.exists(copy_folder):
@@ -52,6 +56,7 @@ copytree(src_dir, copy_folder)
 #By design, rmtree fails on folder containing read-only files.
 #If you want the folder to be deleted regardless of whether
 #it contains read-only files, then use
+
 #shutil.rmtree('/folder_name', ignore_errors=True)
 
 base_dir  = "C:\\Users\jsun\Documents\Desk_1\Py_op\File_op\Basic_op"
@@ -83,6 +88,10 @@ print(os.listdir(ex_dir))
 
 ##______________________________________________________________________________##
 #os.rename(oldname, newname) # rename a file or folder
+
+#shutil.copy2(src_file, des_file)
+#shutil.copytree(src_folder, des_folder) # des_folder should not exist
+
 
 #os.remove() removes a file.
 #os.rmdir() removes an empty directory.

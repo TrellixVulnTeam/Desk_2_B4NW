@@ -75,11 +75,14 @@ res = []
 with open(fname, 'r', encoding='utf-8') as fin:
     num_chars = 100
     rest = fin.readlines(num_chars)
-    # read in lines upto num_chars
+    # read in lines upto num_chars, if the last line passes 30, still include the line as last line
 
     print(rest)
 # # ['from shutil import copyfile, copy2 # copytree\n', 'import os\n', 'import shutil\n', '\n', '# with open(file, "r") as fin:\n']
 
+# readline() return a string ended with "\n"
+# readline(n) return a string of single line, upto n chars
+# if n is bigger than len of current line, only output the whole line.
 ## 3.
 def readInChunks(fileObj, chunkSize=2048):
     """

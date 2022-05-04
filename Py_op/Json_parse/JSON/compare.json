@@ -1,0 +1,7 @@
+[
+    {
+        "replace": "/age",
+        "value": 26,
+        "prev": 29
+    }
+]

@@ -7,6 +7,7 @@ with open(fileName, 'r', encoding='utf-8') as f:
     print(last_line)
 
 # 1.2 read last line
+# Seek() function with negative offset only works when file is opened in binary mode
 import os
 # file needs to be open in 'rb'
 with open(fileName, 'rb') as f:
