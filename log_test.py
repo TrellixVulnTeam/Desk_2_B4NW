@@ -28,6 +28,31 @@ from time import time
 # print(dic["a"]) # deque([100, 200])
 
 
-nums = ["4","100", " 20"] # ['4', '100', ' 20']
-print(1,2,3, sep=": ")
+# nums = ["4","100", " 20"] # ['4', '100', ' 20']
+# print(1,2,3, sep=": ")
 
+def wordCount(startWords=["g","vf","ylpuk","nyf","gdj","j","fyqzg","sizec"], targetWords=["r","am","jg","umhjo","fov","lujy","b","uz","y"] ) :
+    # 8:33 5/12/22
+    from collections import Counter, defaultdict
+    dic = defaultdict(list)
+    for v in startWords:
+        dic[len(v)].append(Counter(v))
+    res = 0
+
+    for v in targetWords:
+        print(v)
+        cnt_v = Counter(v)
+        len_v = len(v)
+        if len_v - 1 in dic:
+            for src in dic[len_v - 1]:
+                flag = False
+                cnt = 0
+                for k, c in src.items():
+                    if k not in cnt_v or c != cnt_v[k]:
+                        flag = True
+                        break
+                if not flag and len(src) < 26:
+                    res += 1
+                    break
+    return res
+print(wordCount())
