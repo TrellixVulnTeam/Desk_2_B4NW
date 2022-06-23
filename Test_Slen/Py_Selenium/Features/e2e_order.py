@@ -70,6 +70,7 @@ originalAmount = driver.find_element_by_css_selector(".discountAmt").text
 promo_code = driver.find_element_by_class_name("promoCode")
 promo_code.send_keys("rahulshettyacademy")
 
+# <button class="promoBtn">Apply</button>
 driver.find_element_by_css_selector(".promoBtn").click()
 
 explicit_wait = WebDriverWait(driver, 10)
