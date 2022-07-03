@@ -1,16 +1,16 @@
 ##1. Basic Authentication
 
 # Basic Authentication
-# Many web services that require authentication accept HTTP Basic Auth. This is the simplest kind, and Requests supports it straight out of the box.
+# Many web services that require authentication accept HTTP Basic Auth. This is the simplest kind,
+# and Requests supports it straight out of the box.
 #
-# Making requests with HTTP Basic Auth is very simple:
-#
-# >>> from requests.auth import HTTPBasicAuth
-# >>> requests.get('https://api.github.com/user', auth=HTTPBasicAuth('user', 'pass'))
+import requests
+from requests.auth import HTTPBasicAuth
+requests.get('https://api.github.com/user', auth=HTTPBasicAuth('user', 'pass'))
 # <Response [200]>
 # In fact, HTTP Basic Auth is so common that Requests provides a handy shorthand for using it:
-#
-# >>> requests.get('https://api.github.com/user', auth=('user', 'pass'))
+
+requests.get('https://api.github.com/user', auth=('user', 'pass'))
 # <Response [200]>
 # Providing the credentials in a tuple like this is exactly the same as the HTTPBasicAuth example above.
 
@@ -22,33 +22,33 @@ from requests.auth import HTTPBasicAuth
 # "https://api.github.com/user"
 
 
-url = "https://api.github.com/users/brb45"
-# url = "https://api.github.com/users/brb45/repos"
+url = "https://api.github.com/users/br45"
+# url = "https://api.github.com/users/br45/repos"
 def authentication_get():
-    response = requests.get(url, auth=("brb45", "z9"))
-    # response = requests.get(url, verify=False,auth=("brb45", "z9"))
-    # Note: sometimes, we may get SSL error certificate verify failed, to avoid, we can use verify=False
-    # response = requests.get(url, auth=HTTPBasicAuth("brb45", "z9"))
-    # response = requests.get(url, auth=HTTPBasicAuth(username="brb45", password="z9"))
-    # print(json.loads(response.text))
+    response = requests.get(url, auth=("br45", "z9"))
+    response = requests.get(url, verify=False,auth=("br45", "z9"))
+    # Note: sometimes, we may get SSL error certificate; to avoid the error, we can use verify=False
+    response = requests.get(url, auth=HTTPBasicAuth("br45", "z9"))
+    response = requests.get(url, auth=HTTPBasicAuth(username="br45", password="z9"))
+    print(json.loads(response.text))
 
     # print(type(response)) <class 'requests.models.Response'>
     response_dic = response.json()
     # print(type(response_dic)) <class 'dict'>
     print(response_dic)
-    # {'login': 'brb45', 'id': 10520787, 'node_id': 'MDQ6VXNlcjEwNTIwNzg3',
-    #  'avatar_url': 'https://avatars.githubusercontent.com/u/10520787?v=4', 'gravatar_id': '',
-    #  'url': 'https://api.github.com/users/brb45', 'html_url': 'https://github.com/brb45',
-    #  'followers_url': 'https://api.github.com/users/brb45/followers',
-    #  'following_url': 'https://api.github.com/users/brb45/following{/other_user}',
-    #  'gists_url': 'https://api.github.com/users/brb45/gists{/gist_id}',
-    #  'starred_url': 'https://api.github.com/users/brb45/starred{/owner}{/repo}',
-    #  'subscriptions_url': 'https://api.github.com/users/brb45/subscriptions',
-    #  'organizations_url': 'https://api.github.com/users/brb45/orgs',
-    #  'repos_url': 'https://api.github.com/users/brb45/repos',
-    #  'events_url': 'https://api.github.com/users/brb45/events{/privacy}',
-    #  'received_events_url': 'https://api.github.com/users/brb45/received_events', 'type': 'User', 'site_admin': False,
-    #  'name': 'Jian Sun', 'company': None, 'blog': '', 'location': None, 'email': None, 'hireable': None, 'bio': None,
+    # {'login': 'br45', 'id': 1052787, 'node_id': 'MDQ6VXNlcjEwNTIwNzg3',
+    #  'avatar_url': 'https://avatars.githubusercontent.com/u/1052787?v=4', 'gravatar_id': '',
+    #  'url': 'https://api.github.com/users/br45', 'html_url': 'https://github.com/br45',
+    #  'followers_url': 'https://api.github.com/users/br45/followers',
+    #  'following_url': 'https://api.github.com/users/br45/following{/other_user}',
+    #  'gists_url': 'https://api.github.com/users/br45/gists{/gist_id}',
+    #  'starred_url': 'https://api.github.com/users/br45/starred{/owner}{/repo}',
+    #  'subscriptions_url': 'https://api.github.com/users/br45/subscriptions',
+    #  'organizations_url': 'https://api.github.com/users/br45/orgs',
+    #  'repos_url': 'https://api.github.com/users/br45/repos',
+    #  'events_url': 'https://api.github.com/users/br45/events{/privacy}',
+    #  'received_events_url': 'https://api.github.com/users/br45/received_events', 'type': 'User', 'site_admin': False,
+    #  'name': 'Jin Sun', 'company': None, 'blog': '', 'location': None, 'email': None, 'hireable': None, 'bio': None,
     #  'twitter_username': None, 'public_repos': 26, 'public_gists': 0, 'followers': 0, 'following': 0,
     #  'created_at': '2015-01-13T19:39:38Z', 'updated_at': '2021-02-15T18:20:34Z'}
     # print(response.json()) # user profile

@@ -32,19 +32,10 @@ def authentication_get():
     print("-----------------------------")
     response_dic = response.json()
     print(response_dic)
-    # {'login': 'brb', 'id': 10520787, 'node_id': 'MDQ6VXNlcjEwNTIwNzg3',
+    # {'login': 'brb', 'id': 1052787, 'node_id': 'MDQ6VXNlcjEwNTIwNzg3',
     #  'avatar_url': 'https://avatars.githubusercontent.com/u/10520787?v=4', 'gravatar_id': '',
-    #  'url': 'https://api.github.com/users/brb45', 'html_url': 'https://github.com/brb45',
-    #  'followers_url': 'https://api.github.com/users/brb45/followers',
-    #  'following_url': 'https://api.github.com/users/brb45/following{/other_user}',
-    #  'gists_url': 'https://api.github.com/users/brb45/gists{/gist_id}',
-    #  'starred_url': 'https://api.github.com/users/brb45/starred{/owner}{/repo}',
-    #  'subscriptions_url': 'https://api.github.com/users/brb45/subscriptions',
-    #  'organizations_url': 'https://api.github.com/users/brb45/orgs',
-    #  'repos_url': 'https://api.github.com/users/brb45/repos',
-    #  'events_url': 'https://api.github.com/users/brb45/events{/privacy}',
-    #  'received_events_url': 'https://api.github.com/users/brb45/received_events', 'type': 'User', 'site_admin': False,
-    #  'name': 'Jian Sun', 'company': None, 'blog': '', 'location': None, 'email': None, 'hireable': None, 'bio': None,
+    #  'url': 'https://api.github.com/users/br45', 'html_url': 'https://github.com/br45',
+    #  'name': 'Jn un', 'company': None, 'blog': '', 'location': None, 'email': None, 'hireable': None, 'bio': None,
     #  'twitter_username': None, 'public_repos': 26, 'public_gists': 0, 'followers': 0, 'following': 0,
     #  'created_at': '2015-01-13T19:39:38Z', 'updated_at': '2021-02-15T18:20:34Z'}
     # print(response.json()) # user profile

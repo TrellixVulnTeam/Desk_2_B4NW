@@ -32,6 +32,6 @@ print(json.dumps(dict(r.request.headers), indent=3))
 #    "Accept": "*/*",
 #    "Connection": "keep-alive"
 # }
-# print(r.request.headers["content-type"]) KeyError: 'content-type'
+
 
 print(requests.head)

@@ -1,5 +1,5 @@
-from locust import HttpLocust, TaskSet, task
-import logging, sys
+from locust import HttpUser, TaskSet, task
+import logging, sys,os
 USER_CREDENTIALS = [ ("LocustPerformanceUser5@gmail.com", "5678901"), \
                      ("LocustPerformanceUser4@gmail.com", "456789"), \
                      ("LocustPerformanceUser3@gmail.com", "345678"), \
@@ -18,7 +18,7 @@ class LoginWithUniqueUsersSteps(TaskSet):
         self.client.post("/login", { 'email': self.email, 'password': self.password })
         logging.info('Login with %s email and %s password', self.email, self.password)
 
-class LoginWithUniqueUsersTest(HttpLocust):
+class LoginWithUniqueUsersTest(HttpUser):
     task_set = LoginWithUniqueUsersSteps
     host = "http://blazedemo.com"
     sock = None
@@ -26,5 +26,5 @@ class LoginWithUniqueUsersTest(HttpLocust):
     def __init__(self):
         super(LoginWithUniqueUsersTest, self).__init__()
 
-
-# locust -f locust_1.py --no-web -c 5 -r 5
+if __name__ == "__main__":
+    os.system("locust -f locust_1.py --no-web -c 5 -r 5")

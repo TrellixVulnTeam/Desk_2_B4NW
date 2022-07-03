@@ -11,7 +11,7 @@ url = 'https://{servicenow_instance_name}.service-now.com/api/now/attachment/upl
 # sense for your use case
 payload = {'table_name':'incident', 'table_sys_id':'81f8915bdb6ba20028927416bf961971'}
 
-# Specify Files To Send and Content Type. When specifying fles to send make sure you specify the path to the file, in
+# Specify Files To Send and Content Type. When specifying files to send make sure you specify the path to the file, in
 # this example the file was located in the same directory as the python script being executed.
 # it is important to specify the correct file type
 files = {'file': ('issue_screenshot.JPG', open('issue_screenshot.JPG', 'rb'), 'image/jpg', {'Expires': '0'})}

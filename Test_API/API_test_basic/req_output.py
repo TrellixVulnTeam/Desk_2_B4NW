@@ -19,10 +19,13 @@ print(response.url)
 print(response.status_code)
 # 200
 
-print(response.request.headers)
+print(f"User-Agent is {response.request.headers['user-agent']}")
 # print(type(response.request.headers))
 # <class 'requests.structures.CaseInsensitiveDict'>
 # {'User-Agent': 'python-requests/2.25.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'}
+
+with open("request_header.json", 'w') as fout:
+    json.dump(dict(response.request.headers), fout, indent=4)
 
 with open('response_headers.json', 'w') as fout:
     json.dump(dict(response.headers), fout, indent=4)
@@ -40,4 +43,4 @@ with open('body_1.json', 'w') as fout:
 
 with open('body2.txt', 'w', encoding='utf-8') as fout:
     fout.write(response.text)
-    print(response.text)
+    # print(response.text)

@@ -4,6 +4,7 @@ import jsonpath
 
 # 8/31/20
 # 12/2/20
+# 6/22/22
 
 # An OpenAPI file allows you to describe your entire API, including:
 #
@@ -42,7 +43,7 @@ response = requests.get(
 #
 # print(response.request)
 # <PreparedRequest [GET]>
-# response.request.headers #dictionary
+# response.request.headers # <class 'requests.structures.CaseInsensitiveDict'>
 # response.request.headers["content-type"]  #  applications/json
 
 
@@ -91,15 +92,15 @@ response_options =  requests.options('https://httpbin.org/get')
 
 # data takes dict, list of tuples, bytes, and file.
 # payload is passed in the message body for post, put, and patch
-
 # get: can pass data in query string-- params
 
 
 #@@ 3.
 # Authentication
+res_auth = requests.get('https://api.github.com/user', auth=("br45","zh" ), timeout=1)
 
 from getpass import getpass
-res_auth = requests.get('https://api.github.com/user', auth=("brb45","zh" ), timeout=1)
+res_auth = requests.get('https://api.github.com/user', auth=("br45","zh" ), timeout=1)
 res_auth = requests.get('https://api.github.com/user', auth=('username', getpass()))
 # print(res_auth.status_code)
 
@@ -158,11 +159,11 @@ r = requests.get('https://httpbin.org/get', params=payload)
 # print(f"r.cookies is {r.cookies}")  r.cookies is <RequestsCookieJar[]>
 # print(f"r.cookies is {r.cookies["cookie_name"]}")
 
-#@@ 4.
-#@@ Upload a file
-#!/usr/bin/env python3
+# @@ 4.
+# @@ Upload a file
+# #!/usr/bin/env python3
 
-import requests as req
+import requests
 
 url = 'http://localhost:5000/upload'
 
@@ -170,7 +171,7 @@ with open('sid.jpg', 'rb') as f:
 
     files = {'image': f}
 
-    r = req.post(url, files=files)
+    response = requests.post(url, files=files)
     print(r.text)
 
 # upload a file
@@ -178,27 +179,32 @@ response = requests.post("https://httpbin.org/post", files={'file': open('nasa_b
 
 
 #@@ 5.
-## Download a file ex1
+
+# Download a file ex1
 url = "https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-5.0.7.tar.xz"
 with requests.get(url, stream=True) as response:
     with open("latest-kernel.tar.xz", "wb") as tarball:
         for chunk in response.iter_content(16384):
             tarball.write(chunk)
 
-#@@ Streaming the data as download
-#!/usr/bin/env python3
+# @@ Streaming the data as download
+# #!/usr/bin/env python3
 import requests as req
 url = "https://docs.oracle.com/javase/specs/jls/se8/jls8.pdf"
 
 local_filename = url.split('/')[-1]
 
-r = req.get(url, stream=True)
+response = requests.get(url, stream=True)
 
 with open(local_filename, 'wb') as f:
 
-    for chunk in r.iter_content(chunk_size=1024):
+    for chunk in response.iter_content(chunk_size=1024):
 
         f.write(chunk)
+
+
+
+
 
 #@@ 6. Use api key
 #

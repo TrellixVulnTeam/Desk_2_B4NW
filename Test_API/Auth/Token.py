@@ -12,13 +12,9 @@ Form data: {grant_type: password, username: email_address, password: userpasswd}
 
 
 import requests
-
 url = "https://geobigdata.io/auth/v1/oauth/token/"
-
 response = requests.request("POST", url)
-
 print(response.text)
-
 
 # 200 OK
 # {

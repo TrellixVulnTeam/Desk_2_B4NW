@@ -1,6 +1,6 @@
 {
     "Server": "GitHub.com",
-    "Date": "Thu, 23 Jun 2022 06:19:45 GMT",
+    "Date": "Thu, 23 Jun 2022 07:13:08 GMT",
     "Content-Type": "application/json; charset=utf-8",
     "Cache-Control": "no-cache",
     "Vary": "Accept, Accept-Encoding, Accept, X-Requested-With",
@@ -16,11 +16,11 @@
     "Content-Security-Policy": "default-src 'none'",
     "Content-Encoding": "gzip",
     "X-RateLimit-Limit": "10",
-    "X-RateLimit-Remaining": "9",
-    "X-RateLimit-Reset": "1655965244",
+    "X-RateLimit-Remaining": "8",
+    "X-RateLimit-Reset": "1655968411",
     "X-RateLimit-Resource": "search",
-    "X-RateLimit-Used": "1",
+    "X-RateLimit-Used": "2",
     "Accept-Ranges": "bytes",
     "Transfer-Encoding": "chunked",
-    "X-GitHub-Request-Id": "DC06:49FE:6E1060:73C87C:62B40600"
+    "X-GitHub-Request-Id": "E872:9FB0:4D1302:516C0A:62B41283"
 }

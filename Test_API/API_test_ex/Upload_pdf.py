@@ -6,9 +6,6 @@ ENCODING = 'utf-8'
 FILE_NAME = 'en-ligne1.pdf'
 JSON_NAME = 'output.json'
 
-# first: reading the binary stuff
-# note the 'rb' flag
-# result: bytes
 with open(FILE_NAME, 'rb') as open_file:
     byte_content = open_file.read()
 
@@ -45,21 +42,34 @@ with open(JSON_NAME, 'w') as another_open_file:
 # The script looks good. Use json_data as "body" of your HTTP-POST request
 # (use "POST" rather than "GET" as "GET" requests typically have a size limitation).
 
-requests.post('http://nohost/plone/folder',\
-              headers={ 'Accept': 'application/json', 'Content-Type': 'application/json', }, \
-              json=raw_data, auth=('admin', 'secret'))
+requests.post('http://nohost/plone/folder',
+              headers={ 'Accept': 'application/json', 'Content-Type': 'application/json'},
+              json=raw_data,
+              auth=('admin', 'secret')
+              )
+
+
 """
-curl -H "X-PrettyPrint: 1" 
+curl 
+    -H "X-PrettyPrint: 1" 
+    -H 'Authorization: OAuth 00DRR0000000N0g!...' --insecure
+    
     -F 'json={ "body":{ 
-    "messageSegments":[ { "type":"Text", "text":"Please accept this receipt." } ] }, 
-    "capabilities":{ "content":{ "description":"Receipt for expenses", "title":"receipt.pdf" } }, 
-    "feedElementType":"FeedItem", "subjectId":"005RR000000DmOb" };
-    type=application/json' 
+                        "messageSegments": [{ "type":"Text", "text":"Please accept this receipt." }] 
+                      }, 
+                "capabilities":{ 
+                                "content":{ "description":"Receipt for expenses", "title":"receipt.pdf" } 
+                                }, 
+                "feedElementType":"FeedItem", 
+                "subjectId":"005RR000000DmOb" 
+              };
+       type=application/json' 
     
+    -F "feedElementFileUpload=@receipt.pdf;
+        type=application/octet-stream"
     
-    -F "feedElementFileUpload=@receipt.pdf;type=application/octet-stream"
- -X POST https://instance_name/services/data/v35.0/chatter/feed-elements 
--H 'Authorization: OAuth 00DRR0000000N0g!...' --insecure
+    -X POST https://instance_name/services/data/v35.0/chatter/feed-elements 
+
 """
 
 """
