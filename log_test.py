@@ -30,25 +30,17 @@ import copy
 import heapq
 
 # No matter what, heapq only creats a min-priority queue
+nums = ['aBc', 'adc', 'bd', 'Ae']
 
-nums = [1, 3, 7, 5, 12, 33, 9, 88,0]
-res = heapq.nsmallest(5, nums, key=lambda x: -x)
-print(res) # [88, 33, 12, 9, 7]
+from collections import deque
+a = [1,2,3,4,5]
+c = a
 
-arr = [1, 3, 7, 5, 12, 33, 9, 88,0]
-res = heapq.nlargest(5, arr, key=lambda x: -x)
-print(res) # [0, 1, 3, 5, 7]
+print(f"id of c is {id(c)}")
+print(f"id of a is {id(a)}")
 
-def compare(x: str, y: str) -> int:
-    return int(x) - int(y)
-
-print(compare(10, 100))
-
-#
-
-
-
-
+id of c is 29318320
+id of a is 29318320
 
 
 
