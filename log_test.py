@@ -33,14 +33,82 @@ import heapq
 nums = ['aBc', 'adc', 'bd', 'Ae']
 
 from collections import deque
-a = [1,2,3,4,5]
-c = a
 
-print(f"id of c is {id(c)}")
-print(f"id of a is {id(a)}")
+# transpose a matrix to column matrix
+from pprint import pprint
 
-id of c is 29318320
-id of a is 29318320
+
+flattened = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16,17,18,19,20]
+r, c, n = 5, 4, len(flattened)
+
+matrix = [ [flattened[i*c + j ] for j in range(c)] for i in range(r)]
+"""
+[[1, 2, 3, 4],
+ [5, 6, 7, 8],
+ [9, 10, 11, 12],
+ [13, 14, 15, 16],
+ [17, 18, 19, 20]
+ ]
+"""
+
+from selenium import webdriver
+from time import sleep
+
+url = "https://www.yahoo.com"
+driver = webdriver.Chrome()
+driver.get(url)
+print(driver.title)
+# Yahoo | Mail, Weather, Search, Politics, News, Finance, Sports & Videos
+print(driver.current_url)
+# https://www.yahoo.com/
+sleep(1)
+driver.switch_to.
+#print(driver.page_source) # Return html page
+# driver.close()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

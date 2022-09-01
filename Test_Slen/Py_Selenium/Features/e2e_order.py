@@ -34,6 +34,7 @@ veg_list = []
 css_select = "input[class='search-keyword']"
 # or
 # css_select = "input.search-keyword"
+
 driver.find_element_by_css_selector(css_select).send_keys("ber")
 time.sleep(3)
 # //div[@class='products']/div
@@ -60,6 +61,9 @@ checkout.click()
 
 explicit_wait = WebDriverWait(driver, 5)
 explicit_wait.until(EC.presence_of_element_located((By.CLASS_NAME, "promoCode")))
+# explicit_wait.until(EC.visibility_of_element_located(By.CLASS_NAME, "promoCode"))
+# explicit_wait.until(EC.title_contains())
+# explicit_wait.until(EC.url_contains())
 
 veg = driver.find_elements_by_css_selector("p.product-name")
 for item in veg:

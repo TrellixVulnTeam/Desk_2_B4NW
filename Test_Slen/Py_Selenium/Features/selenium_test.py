@@ -18,6 +18,7 @@ driver = webdriver.Chrome(options=opt)
 # driver = webdriver.Chrome()
 url = "https://www.makemytrip.com/"
 driver.get(url)
+
 print(driver.title)
 print(driver.current_url)
 driver.maximize_window()
@@ -92,3 +93,38 @@ print(driver.session_id)
 # fc2e1bb0b59213ef134f86e9fff3a635
 
 driver.close()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
