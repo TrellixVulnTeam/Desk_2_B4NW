@@ -70,12 +70,54 @@ from time import sleep
 # driver.switch_to.
 #print(driver.page_source) # Return html page
 # driver.close()
-print(-3//2)
-print(int(-3/2))
-print(-(5//2))
 
 
+def splitIntoFibonacci(num: str) -> list:
+    # 12:45, 9/21/22
 
+    def dfs(num, i, res, dic):
+        if i == len(num):
+            if len(res) > 2 : return True
+            return False
+
+        if i in dic:
+            return dic[i]
+
+        dic[i] = False
+
+        if len(res) < 2:
+            for j in range(i, len(num)):
+                if j > i and num[i] == "0":
+                    break
+                v = int(num[i:j + 1])
+                if v > (1 << 31) - 1: break  # return False
+                res.append(v)
+                if dfs(num, j + 1, res, dic):
+                    dic[i] = True
+                    break
+                else:
+                    res.pop()
+        else:
+            target = res[-1] + res[-2]
+            if target <= (1 << 31) - 1:
+                len_target = len(str(target))
+                if target == int(num[i:i + len_target]):
+                    res.append(target)
+                    if dfs(num, i + len_target, res, dic):
+                        dic[i] = True
+                    else:
+                        res.pop()
+
+        return dic[i]
+
+    res = []
+    dfs(num, 0, res, {})
+    return res
+num="1101111"
+print(splitIntoFibonacci(num))
+
+
+# 1 10 11 11
 
 
 
