@@ -34,7 +34,6 @@ class InstanceCounter:
 
     def set_val(self, newval):
         self.val = newval
-
     def get_val(self):
         return self.val
 
@@ -44,13 +43,10 @@ class InstanceCounter:
 def main_1():
     a = InstanceCounter(5)
     print("val of obj: {a.get_val()}, count: {a.get_count()}")
-
     b = InstanceCounter(10)
     print("val of obj: {a.get_val()}, count: {b.get_count()}")
-
     c = InstanceCounter(100)
     print("val of obj: {a.get_val()}, count: {c.get_count()}")
-
     """
     val of obj: 5, count: 1
     val of obj: 10, count: 2

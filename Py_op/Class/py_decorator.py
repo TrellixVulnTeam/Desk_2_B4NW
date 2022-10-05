@@ -1,65 +1,43 @@
-# example 1
+def run_test(fun):
+    def add_fun():
+        print("start ================ add_fun ============")
+        fun()
+        print("end = ================ add_fun ============")
 
-def run_test(func):
-    def add_function(func):
-        print("calling default function")
-        func()
-
-    print("Not sure if called")
-    return add_function(func)
+    return add_fun
 
 
 @run_test
-def test_f():
-    print("whatever")
-
-
-# Not sure if called
-# calling default function
-# whatever
-
-# ex 2
-def run_test(func):
-    def add_function( ):
-        print("calling default function")
-        func()
-    print("Not sure if called")
-    return add_function()
-
-@run_test
-def test_f():
-    print("whatever")
-
-# Not sure if called
-# calling default function
-# whatever
-
-# ex 3
 def test():
-    i, j = 99, 199
-    print("WU HU")
-kk, gg= 33, 66
-def run_test(func):
-    def add_function( ):
-        print("calling add_function()")
-        func()
-        kk = 999
-        print(f"kk is {kk}, and gg is {gg}")
-    return add_function # return add_function() --> big difference
+    print("-------------test start ----------------")
 
-@run_test
-def test_f():
-    print("Calling test_f()")
-    kk = 0
-    print(f"kk is {kk}")
+test()
 
-test_f()
-print("END")
-# calling add_function()
-# Calling test_f()
-# kk is 0
-# kk is 999, and gg is 66
-# END
+# start ================ add_fun ============
+# -------------test start ----------------
+# end = ================ add_fun ============
+import functools
+def repeat(num_times):
+    def decorator_repeat(func):
+        @functools.wraps(func)
+        def wrapper_repeat(*args, **kwargs):
+            for _ in range(num_times):
+                value = func(*args, **kwargs)
+            return value
+        return wrapper_repeat
+    return decorator_repeat
+
+
+@repeat(num_times=4)
+def greet(name):
+    print(f"Hello {name}")
+
+greet("World")
+
+# Hello World
+# Hello World
+# Hello World
+# Hello World
 
 # ex 4
 def decorator_fun(*args, **kwargs):

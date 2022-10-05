@@ -1,5 +1,6 @@
 Python @Property Explained – How to Use and When? (Full Examples)
-A python @property decorator lets a method to be accessed as an attribute instead of as a method with a '()'. Today, you will gain an understanding of when it is really needed, in what situations you can use it and how to actually use it.
+A python @property decorator lets a method to be accessed as an attribute instead of as a method with a '()'.
+Today, you will gain an understanding of when it is really needed, in what situations you can use it and how to actually use it.
 
 Contents
 1. Introduction
@@ -45,9 +46,11 @@ So far so good.
 
 Now, somehow you decide to change the last name of the person.
 
-Here is a fun fact about python classes: If you change the value of an attribute inside a class, the other attributes that are derived from the attribute you just changed don’t automatically update.
+Here is a fun fact about python classes: If you change the value of an attribute inside a class,
+the other attributes that are derived from the attribute you just changed don’t automatically update.
 
-For example: By changing the self.last name you might expect the self.full attribute, which is derived from self.last to update. But unexpectedly it doesn’t. This can provide potentially misleading information about the person.
+For example: By changing the self.last name you might expect the self.full attribute, which is derived from self.last to update.
+But unexpectedly it doesn’t. This can provide potentially misleading information about the person.
 
 However, notice the email() works as intended, even though it is derived from self.last.
 
@@ -56,7 +59,8 @@ person.last = 'prasanna'
 print(person.last)  #> prasanna
 print(person.fullname)  #> selva prabhakaran
 print(person.email())  #> selva.prasanna@email.com
-So, a probable solution would be to convert the self.fullname attribute to a fullname() method, so it will provide correct value like the email() method did. Let’s do it.
+So, a probable solution would be to convert the self.fullname attribute to a fullname() method,
+so it will provide correct value like the email() method did. Let’s do it.
 
 # Converting fullname to a method provides the right fullname
 # But it breaks old code that used the fullname attribute without the `()`

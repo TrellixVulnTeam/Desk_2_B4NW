@@ -11,7 +11,6 @@ class Employee:
         print("Last Name is ", self.last_name)
         print("ID is ", self.user_id)
         print("Salary is ", self.emp_salary)
-        
 
     @property
     def emp_salary(self):
@@ -23,7 +22,6 @@ class Employee:
 
     def __str__(self):
         return self.last_name + ', ' +  self.first_name
-
 
 def main():
     test_engineer = Employee("Jack", "Wallace", "747612", 10000)

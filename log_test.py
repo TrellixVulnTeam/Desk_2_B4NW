@@ -72,77 +72,32 @@ from time import sleep
 # driver.close()
 
 
-def splitIntoFibonacci(num: str) -> list:
-    # 12:45, 9/21/22
 
-    def dfs(num, i, res, dic):
-        if i == len(num):
-            if len(res) > 2 : return True
-            return False
+def dec_fun(*args, **kwargs):
 
-        if i in dic:
-            return dic[i]
+    def decorator_fun(fun):
+        # print("Inside decorator")
 
-        dic[i] = False
+        def inner(*args, **kwargs):
+            # code functionality here
+            # print("Inside inner function")
+            print("I like", kwargs['like'])
+            print(f"args[0] is {args[0]}")
+            print(f"i is {kwargs['i']}")
 
-        if len(res) < 2:
-            for j in range(i, len(num)):
-                if j > i and num[i] == "0":
-                    break
-                v = int(num[i:j + 1])
-                if v > (1 << 31) - 1: break  # return False
-                res.append(v)
-                if dfs(num, j + 1, res, dic):
-                    dic[i] = True
-                    break
-                else:
-                    res.pop()
-        else:
-            target = res[-1] + res[-2]
-            if target <= (1 << 31) - 1:
-                len_target = len(str(target))
-                if target == int(num[i:i + len_target]):
-                    res.append(target)
-                    if dfs(num, i + len_target, res, dic):
-                        dic[i] = True
-                    else:
-                        res.pop()
+            fun(*args, **kwargs)
 
-        return dic[i]
-
-    res = []
-    dfs(num, 0, res, {})
-    return res
-num="1101111"
-print(splitIntoFibonacci(num))
+        # reurning inner function
+        return inner
+    return decorator_fun
 
 
-# 1 10 11 11
+@dec_fun(100, like="geeksforgeeks", i=100)
+def my_fun(*args, **kwargs):
+    print("Inside actual function")
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+my_fun(100, like="geeksforgeeks", i=100)
 
 
 

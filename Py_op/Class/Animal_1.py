@@ -135,7 +135,6 @@ print(Anim._class_legs)
 
 my_dog = Anim("Churc", 4)
 
-
 # calling property
 print(my_dog.num_of_legs)
 
@@ -146,7 +145,8 @@ print(my_dog.num_of_legs)
 my_dog = Anim("Churc", 100)
 my_dog1 = Anim("Churpc", 400)
 
-
 print(my_dog.__lt__(my_dog1)) # True
 
 print(my_dog < my_dog1)  # True
+
+
