@@ -72,35 +72,18 @@ from time import sleep
 # driver.close()
 
 
+a = tuple(i  for i in range(1,10))
 
-def dec_fun(*args, **kwargs):
+b = tuple(a[3: 6]+a[7:])
 
-    def decorator_fun(fun):
-        # print("Inside decorator")
+print(type(b))
+print(b)
 
-        def inner(*args, **kwargs):
-            # code functionality here
-            # print("Inside inner function")
-            print("I like", kwargs['like'])
-            print(f"args[0] is {args[0]}")
-            print(f"i is {kwargs['i']}")
+v = tuple([1,3,6,7,8, [4,5]])
+print(v)
 
-            fun(*args, **kwargs)
-
-        # reurning inner function
-        return inner
-    return decorator_fun
-
-
-@dec_fun(100, like="geeksforgeeks", i=100)
-def my_fun(*args, **kwargs):
-    print("Inside actual function")
-
-
-my_fun(100, like="geeksforgeeks", i=100)
-
-
-
+g = (v[:3], v[4:])
+print(type(g), g)
 
 
 
