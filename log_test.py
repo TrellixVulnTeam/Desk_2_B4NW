@@ -71,21 +71,59 @@ from time import sleep
 #print(driver.page_source) # Return html page
 # driver.close()
 
+import requests
+import pytest
 
-a = tuple(i  for i in range(1,10))
+# @pytest.fixture(scope="class")
+# def make_call():
+#     print("fixture is called")
+#     return 100
+#
+# @pytest.mark.usefixtures("make_call")
+# class Test_MPS:
+#     def test_1(self, make_call):
+#         print(f" test_1 is {make_call}")
+#     #
+#     # def test_2(self, make_call):
+#     #     print(f" test_2 is {make_call}")
+#
+#     def test_3(self):
+#         print("LIKA")
+#         print(f"{make_call}")
+#
+#     def test_3(self):
+#         print("LIKA")
+#         print(f"{make_call}")
+#         assert 1 == 2
+#
+#     def test_30(self):
+#         print("LIKA")
+#         print(f"{make_call}")
+#
+#     def test_31(self):
+#         print("LIKA")
+#         print(f"{make_call}")
+#         assert 2 == 9
+#
+#     def test_32(self):
+#         print("LIKA")
+#         print(f"{make_call}")
+#
+#
+#
+#
+#
+# import log_pytest
+# log_pytest.test_1()
+#
+# if __name__ == "__main__":
+#     pytest.main(["-s", "-v", "log_test.py"])
 
-b = tuple(a[3: 6]+a[7:])
 
-print(type(b))
-print(b)
+def gcd(x, y):  # Greatest Common Denominator
+    return x if y == 0 else gcd(y, x % y)
 
-v = tuple([1,3,6,7,8, [4,5]])
-print(v)
-
-g = (v[:3], v[4:])
-print(type(g), g)
-
-
+print(gcd(4,18))
 
 
 
